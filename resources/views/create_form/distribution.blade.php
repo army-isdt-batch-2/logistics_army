@@ -25,17 +25,25 @@
                        <form action="#" method="post">
                          @csrf
                             <div class="col-md-6">
-                              <label for="inputEmail4" class="form-label">Returned by</label>
-                              <input type="text" class="form-control" id="inputEmail4">
+                              <label for="inputEmail4" class="form-label">Requestor Name</label>
+                              <input type="text" class="form-control" name="requestor_name" >
                             </div> <div class="col-md-6">
-                              <label for="inputEmail4" class="form-label">Contact Number</label>
-                              <input type="number" class="form-control" id="inputEmail4">
+                              <label for="inputEmail4" class="form-label">Requestor Contact</label>
+                              <input type="number" class="form-control" name="requestor_contact">
+                            </div> <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Purpose</label>
+                                <input type="number" class="form-control" name="purpose">
+                            </div> <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Asset ID</label>
+                                <input type="textarea" class="form-control" name="asset_id" >
+                              <div class="col-12">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Quantity</label>
-                                <input type="number" class="form-control" id="inputEmail4">
+                                <input type="textarea" class="form-control" name="quantity" >
+                              <div class="col-12">
                             </div> <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Reason</label>
-                                <input type="textarea" class="form-control" id="inputEmail4">
+                                <label for="inputEmail4" class="form-label">Status</label>
+                                <input type="textarea" class="form-control" name="status" >
                               <div class="col-12">
                               <button type="submit" class="btn btn-primary">Save</button>
                             </div>

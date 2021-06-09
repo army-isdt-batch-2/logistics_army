@@ -20,6 +20,7 @@ class Asset extends Model
         'category',
         'supplier_id',
         'storage_id',
+        'total_stocks',
         'created_at',
         'updated_at',
         'deleted_at'

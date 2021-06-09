@@ -36,7 +36,7 @@ class LogisticsController extends Controller
     }
     public function save()
     {
-           //save to database
+         
 
         Returns::create(
             $this->request->except('_token')

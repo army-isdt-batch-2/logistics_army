@@ -22,24 +22,24 @@
                    
 
                     <div class="col-12">
-                       <form action="#" method="post">
+                       <form action="/supplier/save" method="post">
                          @csrf
                             <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Name</label>
-                              <input type="text" class="form-control" id="inputEmail4">
+                              <input type="text" class="form-control" name="name" required>
                             </div> <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Contact Number</label>
-                              <input type="number" class="form-control" id="inputEmail4">
+                              <input type="number" class="form-control"  name="contact">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="inputEmail4">
+                                <input type="text" class="form-control"  name="address">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Contact Person</label>
-                                <input type="text" class="form-control" id="inputEmail4">
+                                <input type="text" class="form-control" name="contact_person">
                               <div class="col-12">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Category</label>
-                                <input type="textarea" class="form-control" id="inputEmail4">
+                                <input type="textarea" class="form-control" name='category'>
                               <div class="col-12">
                               <button type="submit" class="btn btn-primary">Save</button>
                             </div>

@@ -11,4 +11,10 @@ class DistributionController extends Controller
 
         return view('distribution');
     }
+    
+    public function create_distribution()
+    {
+
+        return view('create_form.distribution');
+    }
 }

@@ -16,7 +16,7 @@
                         </h4>
                     </div>
                     <div class="col-2 text-end"> 
-                        <a href='#' class="btn btn-dark pull-right">Create</a>
+                        <a href='/create.form.distribution' class="btn btn-dark pull-right">Create</a>
                     </div> 
                     <div class="col-12">
                         <hr>    

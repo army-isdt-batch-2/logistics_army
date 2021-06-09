@@ -1,6 +1,6 @@
-@php $active = 'create_form.storage' @endphp
+@php $active = 'create.form.storage' @endphp
 @extends('layouts.main')
-@section('title','create_form.storage')
+@section('title','create.form.storage')
 @section('content')
     
 <div class="row"> 
@@ -22,20 +22,24 @@
                    
 
                     <div class="col-12">
-                       <form action="#" method="post">
+                       <form action="{{URL::route('save.create.storage')}}" method="post">
                          @csrf
                             <div class="col-md-6">
-                              <label for="inputEmail4" class="form-label">Returned by</label>
-                              <input type="text" class="form-control" id="inputEmail4">
+                              <label for="inputEmail4" class="form-label">Name</label>
+                              <input type="text" class="form-control" name="name">
                             </div> <div class="col-md-6">
-                              <label for="inputEmail4" class="form-label">Contact Number</label>
-                              <input type="number" class="form-control" id="inputEmail4">
+                              <label for="inputEmail4" class="form-label">Building</label>
+                              <input type="number" class="form-control" name="building">
                             </div> <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Quantity</label>
-                                <input type="number" class="form-control" id="inputEmail4">
+                                <label for="inputEmail4" class="form-label">Floor</label>
+                                <input type="number" class="form-control" name="floor">
                             </div> <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Reason</label>
-                                <input type="textarea" class="form-control" id="inputEmail4">
+                                <label for="inputEmail4" class="form-label">Room</label>
+                                <input type="number" class="form-control" name="room">
+                              <div class="col-12">
+                            </div> <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Cabinet</label>
+                                <input type="textarea" class="form-control" name="cabinet">
                               <div class="col-12">
                               <button type="submit" class="btn btn-primary">Save</button>
                             </div>

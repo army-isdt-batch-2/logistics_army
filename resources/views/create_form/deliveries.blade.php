@@ -26,7 +26,7 @@
                          @csrf
                             <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Distributed ID</label>
-                              <input type="text" class="form-control" id="inputEmail4">
+                              <input type="text" class="form-control" name="">
                             </div> <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Transportation ID</label>
                               <input type="number" class="form-control" id="inputEmail4">
