@@ -61,9 +61,13 @@ class StorageController extends Controller
         return Redirect::route('storage');
 
     }
-
-
-
+    public function storage_delete($id)
+    {
     
+        Storage::find($id)->delete();
+        
+
+        return Redirect::route('storage');
+    }
 
 }

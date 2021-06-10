@@ -22,7 +22,7 @@
                    
 
                     <div class="col-12">
-                       <form action="#" method="post">
+                       <form action="{{ URL::route('save.create.distribution') }}" method="post">
                          @csrf
                             <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Requestor Name</label>
@@ -32,18 +32,18 @@
                               <input type="number" class="form-control" name="requestor_contact">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Purpose</label>
-                                <input type="number" class="form-control" name="purpose">
+                                <input type="text" class="form-control" name="purpose">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Asset ID</label>
-                                <input type="textarea" class="form-control" name="asset_id" >
+                                <input type="number" class="form-control" name="asset_id" >
                               <div class="col-12">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Quantity</label>
-                                <input type="textarea" class="form-control" name="quantity" >
+                                <input type="number" class="form-control" name="quantity" >
                               <div class="col-12">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Status</label>
-                                <input type="textarea" class="form-control" name="status" >
+                                <input type="text" class="form-control" name="status" >
                               <div class="col-12">
                               <button type="submit" class="btn btn-primary">Save</button>
                             </div>

@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="col-12">
-                       <form action="#" method="post">
+                       <form action="{{ URL::route('save.create.transportation') }}" method="post">
                          @csrf
                             <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Plate Number</label>

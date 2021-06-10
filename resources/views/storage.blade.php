@@ -46,7 +46,7 @@
                                         <th scope="row">{{ $x->cabinet }}</th> 
                                         <th scope="row">
                                         <a href="{{ URL::route('update.storage', $x->id) }}" class="btn btn-dark btn">update</a>
-                                        <a href="" class="btn btn-dark btn">delete</a>
+                                        <a href="{{ URL::route('storage_delete', $x->id) }}" class="btn btn-dark btn">delete</a>
                                         </th>
                                     </tr>
                                 @endforeach

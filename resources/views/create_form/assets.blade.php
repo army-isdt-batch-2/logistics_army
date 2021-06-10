@@ -11,7 +11,7 @@
 
                     <div class="col-10">
                         <h4>
-                            Assets
+                            Create Assets
                         </h4>
                     </div>
                     
@@ -22,28 +22,28 @@
                    
 
                     <div class="col-12">
-                       <form action="" method="post">
+                       <form action="{{URL::route('save.create.assets')}}" method="post">
                          @csrf
                             <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Name</label>
                               <input type="text" class="form-control" name="name">
                             </div> <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Description</label>
-                              <input type="number" class="form-control" name="description">
+                              <input type="text" class="form-control" name="description">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Category</label>
                                 <input type="number" class="form-control" name="category">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Supplier ID</label>
-                                <input type="textarea" class="form-control" name="supplier_id">
+                                <input type="number" class="form-control" name="supplier_id">
                               <div class="col-12">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Storage ID</label>
-                                <input type="textarea" class="form-control" name="storage_id">
+                                <input type="number" class="form-control" name="storage_id">
                               <div class="col-12">      
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Total Stocks</label>
-                                <input type="textarea" class="form-control" name="total_stocks">
+                                <input type="number" class="form-control" name="total_stocks">
                               <div class="col-12">   
                               <button type="submit" class="btn btn-primary">Save</button>
                             </div>

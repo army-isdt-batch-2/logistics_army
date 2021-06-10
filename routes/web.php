@@ -36,13 +36,19 @@ Route::post('/create/save',[
 Route::get('/deliveries', [
     App\Http\Controllers\DeliveriesController::class,
     'deliveries'
-]);
+])->name('deliveries');
 
 Route::get('/create.form.deliveries', [
     App\Http\Controllers\DeliveriesController::class,
     'create_deliveries'
 
 ]);
+
+Route::post('/save/deliveries', [
+    App\Http\Controllers\DeliveriesController::class,
+    'save_deliveries'
+
+])->name('save.create.deliveries');
 
 
 
@@ -54,13 +60,19 @@ Route::get('/create.form.deliveries', [
 Route::get('/transportation', [
     App\Http\Controllers\TransportationController::class,
     'transportation'
-]);
-
+])->name('transportation');
 
 Route::get('/create.form.transportation', [
     App\Http\Controllers\TransportationController::class,
     'create_transportation'
 ]);
+Route::post('/save/transportation', [
+    App\Http\Controllers\TransportationController::class,
+    'save_transportation'
+])->name('save.create.transportation');
+
+
+
 
 
 
@@ -69,11 +81,17 @@ Route::get('/create.form.transportation', [
 Route::get('/distribution', [
     App\Http\Controllers\DistributionController::class,
     'distribution'
-]);
+])->name('distribution');
+
 Route::get('/create.form.distribution', [
     App\Http\Controllers\DistributionController::class,
     'create_distribution'
 ]);
+
+Route::post('/save/distribution', [
+    App\Http\Controllers\DistributionController::class,
+    'save_distribution'
+])->name('save.create.distribution');
 
 
 
@@ -89,6 +107,15 @@ Route::get('/create.form.assets', [
     App\Http\Controllers\AssetController::class,
     'create_assets'
 ]);
+
+Route::post('/save.assets', [
+    App\Http\Controllers\AssetController::class,
+    'asset_save'
+])->name('save.create.assets');
+
+
+
+
 
 
 
@@ -121,6 +148,11 @@ Route::post('/update/{id}/save',[
     'storage_save'
 ])->name('update.save');
 
+Route::get('/delete/storage/{id}',[
+    App\Http\Controllers\StorageController::class,
+    'storage_delete'
+])->name('storage_delete');
+
 
 
 
@@ -143,4 +175,8 @@ Route::post('/supplier.save', [
     'supplier_save'
 ])->name('save.create.supplier');
 
+Route::get('/delete/supplier/{id}',[
+    App\Http\Controllers\SupplierController::class,
+    'supplier_delete'
+])->name('supplier.delete');
 

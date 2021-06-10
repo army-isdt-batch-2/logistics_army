@@ -31,30 +31,31 @@
                         <table class="table mt-3">
                             <thead>
                                 <tr>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
+                                    <th scope="col">Requestor_name</th>
+                                    <th scope="col">Requestor_contact</th>
+                                    <th scope="col">Purpose</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Asset_id</th>
+
+
+
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    @foreach($data as $x)
+                                        <tr> 
+                                        <th scope="row">{{ $x->distribution_id }}</th>  
+                                        <th scope="row">{{ $x->transportation_id}}</th> 
+                                        <th scope="row">{{ $x->date_distributed }}</th> 
+                                         <th scope="row">{{ $x->status }}</th> 
+                                        <th scope="row">
+                                        <a href="" class="btn btn-dark btn">update</a>
+                                        <a href="" class="btn btn-dark btn">delete</a>
+                                        </th>
+                                         </tr>
+                                    @endforeach
                                 </tr> 
                             </tbody>
                         </table>

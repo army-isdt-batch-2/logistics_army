@@ -31,32 +31,29 @@
                         <table class="table mt-3">
                             <thead>
                                 <tr>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
+                                    <th scope="col">Plate Number</th>
+                                    <th scope="col">Driver Name</th>
+                                    <th scope="col">Driver Contact</th>
+                                    <th scope="col">Notes</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    @foreach($data as $x)
+                                    <tr> 
+                                        <th scope="row">{{ $x->plate_number }}</th>  
+                                        <th scope="row">{{ $x->driver_name}}</th> 
+                                        <th scope="row">{{ $x->driver_contact }}</th> 
+                                         <th scope="row">{{ $x->notes }}</th> 
+                                        <th scope="row">
+                                        <a href="" class="btn btn-dark btn">update</a>
+                                        <a href="" class="btn btn-dark btn">delete</a>
+                                        </th>
+                                    </tr>
+                                @endforeach
                                 </tr> 
                             </tbody>
+                        </table>
                         </table>
                     </div>
                 </div>

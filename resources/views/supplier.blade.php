@@ -49,7 +49,7 @@
                                         <th scope="row">{{ $x->category }}</th> 
                                         <th scope="row">
                                         <a href="" class="btn btn-dark btn">update</a>
-                                        <a href="" class="btn btn-dark btn">delete</a>
+                                        <a href="{{ URL::route('supplier.delete', $x->id) }}" class="btn btn-dark btn">delete</a>
                                         </th>
                                     </tr>
                                 @endforeach
