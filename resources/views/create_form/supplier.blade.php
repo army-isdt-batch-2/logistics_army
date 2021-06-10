@@ -11,7 +11,7 @@
 
                     <div class="col-10">
                         <h4>
-                            Supplier
+                            Create Supplier
                         </h4>
                     </div>
                     
@@ -22,7 +22,7 @@
                    
 
                     <div class="col-12">
-                       <form action="/supplier/save" method="post">
+                       <form action="{{URL::route('save.create.supplier')}}" method="post">
                          @csrf
                             <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Name</label>

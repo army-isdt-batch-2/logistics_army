@@ -18,11 +18,12 @@ class StorageController extends Controller
     }
     
     
-    
     public function storage()
     {
 
-        return view('storage');
+        return view('storage')->with([
+            'data' => Storage::all()
+        ]);
     }
 
     public function create_storage()
@@ -37,9 +38,32 @@ class StorageController extends Controller
         Storage::create(
             $this->request->except('_token')
         );
-
+        
         return Redirect::route('storage');
     }
 
+    public function update_storage($id)
+
+    {
+
+        return view('update_form.storage')->with([
+            'data' => Storage::find($id)
+        ]);
+    }
+
+     public function storage_save($id)
+    {
+
+        Storage::find($id)->update(
+            $this->request->except('_token')
+        );
+
+        return Redirect::route('storage');
+
+    }
+
+
+
+    
 
 }

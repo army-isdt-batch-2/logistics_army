@@ -29,13 +29,13 @@
                               <input type="text" class="form-control" name="">
                             </div> <div class="col-md-6">
                               <label for="inputEmail4" class="form-label">Transportation ID</label>
-                              <input type="number" class="form-control" id="inputEmail4">
+                              <input type="number" class="form-control" >
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Date Distributed</label>
-                                <input type="number" class="form-control" id="inputEmail4">
+                                <input type="number" class="form-control">
                             </div> <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Status</label>
-                                <input type="textarea" class="form-control" id="inputEmail4">
+                                <input type="textarea" class="form-control" >
                               <div class="col-12">
                               <button type="submit" class="btn btn-primary">Save</button>
                             </div>

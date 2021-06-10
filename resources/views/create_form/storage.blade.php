@@ -11,7 +11,7 @@
 
                     <div class="col-10">
                         <h4>
-                            Storage
+                            Create Storage
                         </h4>
                     </div>
                     

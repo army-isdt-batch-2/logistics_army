@@ -16,7 +16,7 @@ class Supplier extends Model
         'name',
         'contact',
         'address',
-        'contact Person',
+        'contact_person',
         'category',
         'created_at',
         'updated_at',

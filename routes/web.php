@@ -96,7 +96,6 @@ Route::get('/create.form.assets', [
 
 
 
-
 Route::get('/storage', [
     App\Http\Controllers\StorageController::class,
     'storage'
@@ -112,9 +111,15 @@ Route::post('/save.storage', [
     'save_storage'
 ])->name('save.create.storage');
 
+Route::get('/update/storage/{id}', [
+    App\Http\Controllers\StorageController::class,
+    'update_storage'
+])->name('update.storage');
 
-
-
+Route::post('/update/{id}/save',[
+    App\Http\Controllers\StorageController::class,
+    'storage_save'
+])->name('update.save');
 
 
 
@@ -126,16 +131,16 @@ Route::post('/save.storage', [
 Route::get('/supplier', [
     App\Http\Controllers\SupplierController::class,
     'supplier'
-]);
+])->name('supplier');
 
 Route::get('/create.form.supplier', [
     App\Http\Controllers\SupplierController::class,
     'create_supplier'
 ]);
 
-Route::post('/supplier/save', [
+Route::post('/supplier.save', [
     App\Http\Controllers\SupplierController::class,
     'supplier_save'
-])->name('supplier.save');
+])->name('save.create.supplier');
 
 

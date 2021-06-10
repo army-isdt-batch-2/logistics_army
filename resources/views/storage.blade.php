@@ -21,41 +21,35 @@
                     <div class="col-12">
                         <hr>    
                     </div>
-
                     <div class="col-8"></div>
                     <div class="col-4 text-end"> 
                         <input type="text" class="form-control" placeholder="Search">
                     </div> 
-
-                    <div class="col-12">
-                        <table class="table mt-3">
+                    <div class="col-12 mt-3" >
+                        <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
-                                    <th class="text-muted" scope="col"></th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Building</th>
+                                    <th scope="col">Floor</th>
+                                    <th scope="col">Room</th>
+                                    <th scope="col">Cabinet</th> 
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr> 
+                                @foreach($data as $x)
+                                    <tr> 
+                                        <th scope="row">{{ $x->name }}</th>  
+                                        <th scope="row">{{ $x->building}}</th> 
+                                        <th scope="row">{{ $x->floor }}</th> 
+                                         <th scope="row">{{ $x->room }}</th> 
+                                        <th scope="row">{{ $x->cabinet }}</th> 
+                                        <th scope="row">
+                                        <a href="{{ URL::route('update.storage', $x->id) }}" class="btn btn-dark btn">update</a>
+                                        <a href="" class="btn btn-dark btn">delete</a>
+                                        </th>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

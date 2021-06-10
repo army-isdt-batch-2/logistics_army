@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Supplier;
+use Redirect;
 
 class SupplierController extends Controller
 {
@@ -20,7 +21,9 @@ class SupplierController extends Controller
     public function supplier()
     {
 
-        return view('supplier');
+        return view('supplier')->with([
+            'data' => Supplier::all()
+        ]);
     }
 
 
@@ -38,7 +41,7 @@ class SupplierController extends Controller
         );
 
 
-        return Supplier::route('supplier');
+        return Redirect::route('supplier');
     }
 
     
